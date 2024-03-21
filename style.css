@@ -1,0 +1,131 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    max-width: 90%;
+    margin: auto;
+}
+
+header {
+    background-color: brown;
+    margin: 0;
+    color: white;
+    height: 80px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-weight: 700;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul a  {
+    text-decoration: none;
+    color: white;
+    margin: 0 12px;
+}
+
+header img.menu-icon  {
+    max-width: 20px; 
+    height: auto;
+}
+
+.hero {
+    color: white;
+    background-color: blue;
+    background-image: url(https://images.pexels.com/photos/920570/pexels-photo-920570.jpeg?cs=srgb&dl=pexels-min-an-920570.jpg&fm=jpg);
+    background-position: center;
+    background-size: contain;
+    height: 600px;
+
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero h1 {
+    margin: 0;
+    font-size: 52px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.hero button {
+    background-color: brown;
+    border: none;
+    padding: 12px 36px;
+    font-size: 18px;
+    color: white;
+}
+
+header .menu-icon {
+    display: none;
+    filter: invert(1);
+}
+
+header .close-icon {
+    width: 60px;
+    filter: invert(1);
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    header .menu-icon {
+        display: initial;
+    }
+
+    header .close-icon {
+        display: initial;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: brown;
+        z-index: 100;
+        transition: right 0.5s;
+    }
+
+    header nav.open {
+        right: 0;
+    }
+
+    header nav.open ul {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+    }
+
+    header nav.open li {
+        margin: 20px 0;
+        font-size: 36px;
+    }
+}
+
+
+
